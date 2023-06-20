@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='profile',
             name='position',
-            field=models.CharField(choices=[('Грузчик', 'Грузчик'), ('Менеджер', 'Менеджер'), ('Администратор', 'Администратор')], default='Грузчик', max_length=30, verbose_name='Должность'),
+            field=models.CharField(choices=[('Вантажник', 'Вантажник'), ('Менеджер', 'Менеджер'), ('Адміністратор', 'Адміністратор')], default='Вантажник', max_length=30, verbose_name='Посада'),
         ),
     ]

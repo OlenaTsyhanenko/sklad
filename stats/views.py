@@ -74,7 +74,7 @@ def getSt(request):
 def show_index(request):
     sklad = WarehouseSpace.objects.all()
 
-    type_user = "Грузчик"
+    type_user = "Вантажник"
     us_name = "1"
     if auth.get_user(request).username.__len__() > 0:
         us_name = auth.get_user(request).username

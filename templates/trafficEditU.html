@@ -36,7 +36,7 @@
                 </div>
                 <input id="hiddenRT2" class="d-none" value="{{ tr.id }}" >
 
-                {% if tr.status == "Ожидание" %}
+                {% if tr.status == "Очікування" %}
                     <div class="row pad15" id="pribilBtn">
                         <div class="col-4 offset-4" style="height: 36px">
                             <div class="center svr" onclick="startUnload('{{ tr.id }}')">Почати розвантаження</div>
@@ -57,7 +57,7 @@
                         </select>
                      </div>
                 </div>
-            <div id="pribil1" class="row pad15" {% if tr.status == "Ожидание" %}style="display: none"{% endif %}>
+            <div id="pribil1" class="row pad15" {% if tr.status == "Очікування" %}style="display: none"{% endif %}>
                 <div class="col-4 divNameT">
                     <label for="traffic_raz" class="nameTable">Розвантажує</label>
                 </div>

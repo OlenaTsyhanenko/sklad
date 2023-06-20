@@ -8,7 +8,7 @@ class Transport(models.Model):
     timeUse = models.IntegerField(default=0, verbose_name="Хвилин использования за сегодня", null=True, blank=True)
     HoursDay = models.IntegerField(default=8, verbose_name="Норма годин в день", null=True, blank=True)
     allHours = models.IntegerField(default=6400, verbose_name="Ресурс использования в часах", null=True, blank=True)
-    allHoursUse = models.IntegerField(default=0, verbose_name="Используется годин", null=True, blank=True)
+    allHoursUse = models.IntegerField(default=0, verbose_name="Використовується годин", null=True, blank=True)
     unloads = models.ForeignKey(Traffic, on_delete=models.CASCADE, null=True, blank=True, verbose_name="Разгружает Вантажопотік")
     unloadsTr = models.ForeignKey(Unloader, on_delete=models.CASCADE, null=True, blank=True, verbose_name="Разгружает Вантажопотік")
     bTrucker = models.BooleanField(default=False, verbose_name="Это грузовик")
@@ -17,7 +17,7 @@ class Transport(models.Model):
     dateEditStatus = models.DateTimeField(null=True, blank=True, verbose_name="Дата изменения статуса")
     categories2 = (
         ("Простой", "Простой"),
-        ("Используется", "Используется"),
+        ("Використовується", "Використовується"),
     )
     status = models.CharField(
         default="Простой",

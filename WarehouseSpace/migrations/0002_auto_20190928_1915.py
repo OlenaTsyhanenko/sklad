@@ -35,6 +35,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='warehousespace',
             name='typeProduct',
-            field=models.CharField(choices=[('Сухі товари', 'Сухі товари'), ('Швидко псуються товари', 'Швидко псуються товари'), ('Крихкі товари', 'Крихкі товари')], default='Грузчик', max_length=30, verbose_name='Тип склада'),
+            field=models.CharField(choices=[('Сухі товари', 'Сухі товари'), ('Швидко псуються товари', 'Швидко псуються товари'), ('Крихкі товари', 'Крихкі товари')], default='Вантажник', max_length=30, verbose_name='Тип склада'),
         ),
     ]

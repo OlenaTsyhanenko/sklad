@@ -6,18 +6,18 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    fio = models.CharField(verbose_name="ФИО", max_length=30, blank=True)
-    workWith = models.DateField(verbose_name="Работает с", null=True, blank=True)
+    fio = models.CharField(verbose_name="ПІБ", max_length=30, blank=True)
+    workWith = models.DateField(verbose_name="Працює з", null=True, blank=True)
     hoursModifier = models.IntegerField(verbose_name="Норма-годин (модификатор)", null=True, blank=True)
     categories = (
-        ("Грузчик", "Грузчик"),
+        ("Вантажник", "Вантажник"),
         ("Менеджер", "Менеджер"),
-        ("Администратор", "Администратор"),
+        ("Адміністратор", "Адміністратор"),
     )
     position = models.CharField(
-        default="Грузчик",
+        default="Вантажник",
         max_length=30,
-        verbose_name="Должность",
+        verbose_name="Посада",
         choices=categories
     )
 
@@ -28,8 +28,8 @@ class Profile(models.Model):
         return self.user.username
 
     class Meta:
-        verbose_name = u"Пользователь"
-        verbose_name_plural = u"Пользователь"
+        verbose_name = u"Користувач"
+        verbose_name_plural = u"Користувач"
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):

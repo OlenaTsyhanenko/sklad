@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='transport',
             name='status',
-            field=models.CharField(choices=[('Простой', 'Простой'), ('Используется', 'Используется')], default='Простой', max_length=30, verbose_name='Статус использования'),
+            field=models.CharField(choices=[('Простой', 'Простой'), ('Використовується', 'Використовується')], default='Простой', max_length=30, verbose_name='Статус использования'),
         ),
     ]

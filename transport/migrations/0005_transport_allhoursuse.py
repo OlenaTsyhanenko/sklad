@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='transport',
             name='allHoursUse',
-            field=models.IntegerField(blank=True, default=0, null=True, verbose_name='Используется годин'),
+            field=models.IntegerField(blank=True, default=0, null=True, verbose_name='Використовується годин'),
         ),
     ]

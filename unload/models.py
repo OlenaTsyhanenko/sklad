@@ -12,12 +12,12 @@ class Unloader(models.Model):
     loads = models.BooleanField(default=False, null=True, blank=True, verbose_name="Завантажений")
 
     categories2 = (
-        ("Ожидание", "Ожидание"),
+        ("Очікування", "Очікування"),
         ("Завантажений", "Завантажений"),
         ("Відправлен", "Відправлен"),
     )
     status = models.CharField(
-        default="Ожидание",
+        default="Очікування",
         max_length=30,
         verbose_name="Статус",
         choices=categories2

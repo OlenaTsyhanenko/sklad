@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('height', models.IntegerField(blank=True, null=True, verbose_name='розміри помещения (Висота)')),
                 ('size', models.IntegerField(blank=True, null=True, verbose_name='розміри помещения')),
                 ('optimumTemperature', models.IntegerField(blank=True, null=True, verbose_name='Температура склада')),
-                ('typeProduct', models.CharField(choices=[('Сухі товари', 'Сухі товари'), ('Швидко псуються товари', 'Швидко псуються товари'), ('Крихкі товари', 'Крихкі товари')], default='Грузчик', max_length=30, verbose_name='Должность')),
+                ('typeProduct', models.CharField(choices=[('Сухі товари', 'Сухі товари'), ('Швидко псуються товари', 'Швидко псуються товари'), ('Крихкі товари', 'Крихкі товари')], default='Вантажник', max_length=30, verbose_name='Посада')),
             ],
             options={
                 'verbose_name': 'Склад',

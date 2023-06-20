@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('dateArrival', models.DateTimeField(blank=True, null=True, verbose_name='Очікуємое время начала розвантження')),
                 ('dateUpload', models.DateTimeField(blank=True, null=True, verbose_name='Дата розвантаження')),
                 ('timeProc', models.IntegerField(blank=True, default=0, null=True, verbose_name='Хвилин на розвантаження')),
-                ('status', models.CharField(choices=[('Ожидание', 'Ожидание'), ('Завантажений', 'Завантажений'), ('Відправлен', 'Відправлен')], default='Ожидание', max_length=30, verbose_name='Статус')),
+                ('status', models.CharField(choices=[('Очікування', 'Очікування'), ('Завантажений', 'Завантажений'), ('Відправлен', 'Відправлен')], default='Очікування', max_length=30, verbose_name='Статус')),
             ],
             options={
                 'verbose_name': 'Розвантаження',

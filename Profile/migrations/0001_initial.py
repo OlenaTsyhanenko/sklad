@@ -21,12 +21,12 @@ class Migration(migrations.Migration):
                 ('fio', models.CharField(blank=True, max_length=30, verbose_name='ФИО')),
                 ('workWith', models.DateField(blank=True, null=True, verbose_name='Работает с')),
                 ('hoursModifier', models.IntegerField(blank=True, null=True, verbose_name='Норма-годин (модификатор)')),
-                ('position', models.CharField(choices=[('Грузчик', 'Грузчик'), ('Администратор', 'Администратор')], default='Грузчик', max_length=30, verbose_name='Должность')),
+                ('position', models.CharField(choices=[('Вантажник', 'Вантажник'), ('Адміністратор', 'Адміністратор')], default='Вантажник', max_length=30, verbose_name='Посада')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'verbose_name': 'Пользователь',
-                'verbose_name_plural': 'Пользователь',
+                'verbose_name': 'Користувач',
+                'verbose_name_plural': 'Користувач',
             },
         ),
     ]

@@ -5,7 +5,7 @@ from products.models import Product
 from WarehouseSpace.models import WarehouseSpace
 
 def show_index(request):
-    type_user = "Грузчик"
+    type_user = "Вантажник"
     us_name = "1"
     if auth.get_user(request).username.__len__() > 0:
         us_name = auth.get_user(request).username

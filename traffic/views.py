@@ -16,7 +16,7 @@ def stopTraffic2(request, id1, id3):
     unl = Unloader.objects.get(id=id1)
     status = id3
     try:
-        car = Transport.objects.filter(unloadsTr=unl, status="Используется")[0]
+        car = Transport.objects.filter(unloadsTr=unl, status="Використовується")[0]
         car.status = "Простой"
         d1 = datetime.now()
         d2 = car.dateEditStatus
@@ -52,7 +52,7 @@ def stopTraffic2(request, id1, id3):
 def stopTraffic3(request, id1):
     trf = Unloader.objects.get(id=id1)
     try:
-        cars = Transport.objects.filter(unloadsTr=trf, status="Используется")
+        cars = Transport.objects.filter(unloadsTr=trf, status="Використовується")
         for car in cars:
             car.status = "Простой"
             d1 = datetime.now()
@@ -88,7 +88,7 @@ def stopTraffic(request, id1, id3):
     trf = Traffic.objects.get(id=id1)
     status = id3
     try:
-        car = Transport.objects.filter(unloads=trf, status="Используется")[0]
+        car = Transport.objects.filter(unloads=trf, status="Використовується")[0]
         car.status = "Простой"
         d1 = datetime.now()
         d2 = car.dateEditStatus
@@ -127,7 +127,7 @@ def setRazgruzka2(request, id1):
     i = 1
     while i <= count:
         car = Transport.objects.get(id= form["t" + str(i)])
-        car.status = "Используется"
+        car.status = "Використовується"
         car.dateEditStatus = datetime.now()
         car.unloadsTr = trf
         car.save()
@@ -142,7 +142,7 @@ def setRazgruzka(request, id1, id2):
     car = Transport.objects.get(id=id2)
     trf = Traffic.objects.get(id=id1)
     trf.unloads = True
-    car.status = "Используется"
+    car.status = "Використовується"
     car.dateEditStatus = datetime.now()
     car.unloads = trf
     car.save()
@@ -179,7 +179,7 @@ def setPribil(request, id1):
 
 
 def get_trafficU(request, id1):
-    type_user = "Грузчик"
+    type_user = "Вантажник"
     us_name = "1"
     if auth.get_user(request).username.__len__() > 0:
         us_name = auth.get_user(request).username
@@ -200,7 +200,7 @@ def get_trafficU(request, id1):
             car2.append(ch)
     car = car2
     try:
-        car_now = Transport.objects.filter(unloadsTr=trU, status="Используется")[0]
+        car_now = Transport.objects.filter(unloadsTr=trU, status="Використовується")[0]
     except Exception:
         car_now = ""
     data = {"index": 8, "us_name": us_name, "type_user": type_user, "tr": trU, "prd": prd, "car": car,
@@ -209,7 +209,7 @@ def get_trafficU(request, id1):
 
 
 def get_traffic(request, id1):
-    type_user = "Грузчик"
+    type_user = "Вантажник"
     us_name = "1"
     if auth.get_user(request).username.__len__() > 0:
         us_name = auth.get_user(request).username
@@ -230,7 +230,7 @@ def get_traffic(request, id1):
             car2.append(ch)
     car = car2
     try:
-        car_now = Transport.objects.filter(unloads=tr, status="Используется")[0]
+        car_now = Transport.objects.filter(unloads=tr, status="Використовується")[0]
     except Exception:
         car_now = ""
     data = {"index": 5, "us_name": us_name, "type_user": type_user, "tr": tr, "prd": prd, "car": car,
@@ -312,7 +312,7 @@ def addNewUnl(request):
     arr = (datetime.strptime(arr, "%Y-%m-%d %H:%M:%S")).replace(tzinfo=None)
     i = 0
     un = Unloader.objects.create(dateRegister=datetime.now(), dateArrival=arr,
-                                 status="Ожидание")
+                                 status="Очікування")
     countPp = 0
     while i < int(countPal):
         tov = form["t" + str(i)]
@@ -400,7 +400,7 @@ def addNew(request):
 
 
 def unloading(request):
-    type_user = "Грузчик"
+    type_user = "Вантажник"
     us_name = "1"
     if auth.get_user(request).username.__len__() > 0:
         us_name = auth.get_user(request).username
@@ -413,7 +413,7 @@ def unloading(request):
 
 
 def show_index(request):
-    type_user = "Грузчик"
+    type_user = "Вантажник"
     us_name = "1"
     if auth.get_user(request).username.__len__() > 0:
         us_name = auth.get_user(request).username
