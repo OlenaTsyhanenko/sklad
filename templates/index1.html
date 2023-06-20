@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+{% if index == 1 %}
+    Товари
+{% elif index == 2 %}
+    Склади
+{% elif index == 3 %}
+    Стелажи
+{% elif index == 4 %}
+    Вантажопотік
+{% elif index == 5 %}
+    Вантажопотік {{ tr.id }}
+{% elif index == 6 %}
+    Транспорт
+{% elif index == 7 %}
+    Розвантаження
+{% elif index == 8 %}
+    Розвантаження {{ tr.id }}
+{% elif index == 9 %}
+    Статистика
+{% endif %}
+
+{% endblock title %}
+
+
+{% block header %}Товари{% endblock header %}

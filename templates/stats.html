@@ -1,0 +1,38 @@
+<div class="main_index">
+    <div class="container-fluid">
+        <div class="row pad15TB">
+            <select id="sel_skl_stats" class="btnTable h36" name="sklad_select">
+                <option value="9999999">Всі склади</option>
+                {% for ch in sk %}
+                    <option value="{{ ch.id }}">{{ ch.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="row pad15TB">
+            <div class="col-6 h36">
+                <select id="sel_mnt" class="btnTable h36" name="sklad_select">
+                    <option selected value="0">Поточний місяць</option>
+                    <option value="1">Січень</option>
+                    <option value="2">Лютий</option>
+                    <option value="3">Березень</option>
+                    <option value="4">Квітень</option>
+                    <option value="5">Травень</option>
+                    <option value="6">Червень</option>
+                    <option value="7">Липень</option>
+                    <option value="8">Серпень</option>
+                    <option value="9">Вересень</option>
+                    <option value="10">Жовтень</option>
+                    <option value="11">Листопад</option>
+                    <option value="12">Грудень</option>
+                </select>
+            </div>
+        </div>
+        <div class="row pad15TB">
+            <div class="col-12">
+                <canvas id="chart1" height="100"></canvas>
+            </div>
+        </div>
+
+        <div id="pdf_btn"><div class="center">Створити PDF-звіт</div> </div>
+    </div>
+</div>

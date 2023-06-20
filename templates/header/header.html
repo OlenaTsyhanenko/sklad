@@ -1,0 +1,36 @@
+{% load staticfiles  %}
+<header class="container-fluid">
+    <div class="blackBgB row">
+        <div class="logo col-4 col-lg-2 h-fix">
+            <div class="vCenter center">
+                Складовик
+            </div>
+        </div>
+        <div class="col-4 col-lg-4">
+            <div class="vCenter center item1Head">
+                {% if index == 1 %}
+                    Товари
+                {% elif index == 2 %}
+                    Склади
+                {% elif index == 3 %}
+                    Стелажи
+                {% elif index == 4 %}
+                    Вантажопотік
+                {% elif index == 5 %}
+                    Вантажопотік {{ tr.id }}
+                {% elif index == 6 %}
+                    Транспорт
+                {% elif index == 7 %}
+                    Розвантаження
+                {% elif index == 8 %}
+                    Розвантаження {{ tr.id }}
+                {% elif index == 9 %}
+                    Статистика
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-4 col-lg-6">
+            <div class="vCenter itemUsHead">{{ us_name }} </div>
+        </div>
+    </div>
+</header>
